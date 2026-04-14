@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:if="${success}">
+    <p th:text="${success}"></p>
+</div>
+<form th:action="@{/email}" th:object="${email}" method="post">
+    <input th:field="*{recipient}" type="text" placeholder="Mottagare"/>
+    <input th:field="*{subject}" type="text" placeholder="Ämne"/>
+    <input th:field="*{message}" type="text" placeholder="Meddelande">
+
+    <button type="submit">Skicka</button>
+</form>
+</body>
+</html>
