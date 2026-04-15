@@ -10,7 +10,7 @@
     </parent>
     <groupId>se.iths.johan</groupId>
     <artifactId>spring-messenger</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>spring-messenger</name>
     <description>spring-messenger</description>
@@ -72,6 +72,11 @@
         </dependency>
     </dependencies>
 
+
+
+
+
+
     <build>
         <plugins>
             <plugin>
@@ -90,4 +95,12 @@
         </plugins>
     </build>
 
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/johan969/spring-messenger</url>
+        </repository>
+    </distributionManagement>
 </project>
