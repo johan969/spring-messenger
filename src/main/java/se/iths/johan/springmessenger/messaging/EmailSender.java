@@ -6,6 +6,7 @@ import jakarta.mail.Session;
 import jakarta.mail.Transport;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.server.MimeMappings;
 import org.springframework.stereotype.Component;
 import se.iths.johan.springmessenger.model.Email;
@@ -16,8 +17,10 @@ import java.util.Properties;
 @Component("email")
 public class EmailSender implements Messenger {
 
-    private static final String FROM = "safe.webshop.iths@gmail.com";
-    private static final String APP_PASSWORD = "igfw qlbe qita ydhm";
+    @Value("${spring.mail.username}")
+    private String FROM;
+    @Value("${spring.mail.password}")
+    private String APP_PASSWORD;
 
     @Override
     public void send(Message message) {
