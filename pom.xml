@@ -10,7 +10,7 @@
     </parent>
     <groupId>se.iths.johan</groupId>
     <artifactId>spring-messenger</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
     <name>spring-messenger</name>
     <description>spring-messenger</description>

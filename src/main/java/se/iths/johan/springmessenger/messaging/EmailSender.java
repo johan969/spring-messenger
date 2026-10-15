@@ -24,6 +24,8 @@ public class EmailSender implements Messenger {
 
     @Override
     public void send(Message message) {
+
+        System.out.println(FROM + " " + " " + APP_PASSWORD);
         //Implementation av den abstrakta metoden send i interface messanger
         //Här har vi tillgång till email-variabel
 
@@ -59,6 +61,7 @@ public class EmailSender implements Messenger {
             System.out.println("Sent message successfully....");
         }catch (Exception e){
             System.out.println("Email sending failed....");
+            e.printStackTrace();
         }
 
     }
